@@ -59,9 +59,9 @@ nav .menu {
     border-radius: 6px;
 }
 
-@media (max-width: 390px) {
+@media (max-width: 435px) {
     .menu .list li a {
-        padding: 6px 6px;
+        padding: 10px ;
     }
 }
 
@@ -76,11 +76,11 @@ nav .menu {
     right: 8%;
 }
 
-@media (max-width: 390px) {
+@media (max-width: 435px) {
     .imge {
         position: absolute;
-        top: 12%;
-        right: 7%;
+        top: 15%;
+        right: 10%;
     }
 }
 
@@ -98,10 +98,10 @@ nav .menu {
     width: 50%;
 }
 
-@media (max-width: 390px) {
+@media (max-width: 435px) {
     .con {
         position: absolute;
-        top: 59%;
+        top: 60%;
         left: 8%;
         width: 88%;
     }
@@ -163,8 +163,9 @@ nav .menu {
     justify-content: center;
 
 }
-@media (max-width: 390px){
+@media (max-width: 435px){
     .box{
+        padding-left: 15px;
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
@@ -178,9 +179,9 @@ nav .menu {
     overflow: hidden;
     border-radius: 140px;
 }
-@media (max-width: 390px){
+@media (max-width: 435px){
     .pop{
-        width: 160px;
+        width: 170px;
     height: 150px;
     }
 }
