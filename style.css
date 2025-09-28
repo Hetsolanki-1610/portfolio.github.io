@@ -5,6 +5,14 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    /* side scroll hata dega */
+}
+
 body {
     background: #0f172a;
     /* Dark navy blue */
@@ -59,9 +67,9 @@ nav .menu {
     border-radius: 6px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
     .menu .list li a {
-        padding: 10px ;
+        padding: 23px;
     }
 }
 
@@ -76,14 +84,11 @@ nav .menu {
     right: 8%;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
     .imge {
         position: absolute;
         top: 15%;
-        left: 17%;
-    }
-    .imge img {
-        width: 350px;
+        left: 12%;
     }
 }
 
@@ -93,9 +98,10 @@ nav .menu {
     border: 2px solid #00abf0;
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.6);
 }
-@media (max-width: 600px) {
+
+@media (max-width: 500px) {
     .imge img {
-        width: 370px;
+        width: 350px;
     }
 }
 
@@ -106,12 +112,12 @@ nav .menu {
     width: 50%;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
     .con {
         position: absolute;
-        top: 60%;
+        top: 65%;
         left: 8%;
-        width: 88%;
+        width: 90%;
     }
 
     .con p {
@@ -171,13 +177,14 @@ nav .menu {
     justify-content: center;
 
 }
-@media (max-width: 600px){
-    .box{
+
+@media (max-width: 500px) {
+    .box {
         padding-left: 35px;
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
-     
+
 }
 
 .pop {
@@ -187,16 +194,17 @@ nav .menu {
     overflow: hidden;
     border-radius: 140px;
 }
-@media (max-width: 600px){
-    .pop{
-        width: 190px;
-    height: 180px;
+
+@media (max-width: 500px) {
+    .pop {
+        width: 180px;
+        height: 160px;
     }
 }
 
-.pop img{
+.pop img {
     width: 100%;
     height: 100%;
-   object-fit: cover; 
-    
+    object-fit: cover;
+
 }
