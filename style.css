@@ -5,14 +5,6 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-html,
-body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    /* side scroll hata dega */
-}
-
 body {
     background: #0f172a;
     /* Dark navy blue */
@@ -20,7 +12,7 @@ body {
 }
 
 header {
-    height: 100vh;
+    height: 90vh;
     width: 100%;
 }
 
@@ -67,12 +59,6 @@ nav .menu {
     border-radius: 6px;
 }
 
-@media (max-width: 500px) {
-    .menu .list li a {
-        padding: 23px;
-    }
-}
-
 .menu .list li a:hover {
     background-color: #00abf0;
     color: #fff;
@@ -84,25 +70,11 @@ nav .menu {
     right: 8%;
 }
 
-@media (max-width: 500px) {
-    .imge {
-        position: absolute;
-        top: 15%;
-        left: 12%;
-    }
-}
-
 .imge img {
     width: 340px;
     border-radius: 15px;
     border: 2px solid #00abf0;
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.6);
-}
-
-@media (max-width: 500px) {
-    .imge img {
-        width: 350px;
-    }
 }
 
 .con {
@@ -111,20 +83,6 @@ nav .menu {
     left: 8%;
     width: 50%;
 }
-
-@media (max-width: 500px) {
-    .con {
-        position: absolute;
-        top: 65%;
-        left: 8%;
-        width: 90%;
-    }
-
-    .con p {
-        font-size: 12px;
-    }
-}
-
 
 .con h1 {
     font-size: 50px;
@@ -167,7 +125,7 @@ nav .menu {
     padding-bottom: 30px;
     font-size: 40px;
     font-weight: 700;
-    padding-top: 15px;
+    padding-top: 1px;
 }
 
 .box {
@@ -175,15 +133,6 @@ nav .menu {
     display: flex;
     align-items: center;
     justify-content: center;
-
-}
-
-@media (max-width: 500px) {
-    .box {
-        padding-left: 35px;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
 
 }
 
@@ -195,16 +144,51 @@ nav .menu {
     border-radius: 140px;
 }
 
-@media (max-width: 500px) {
-    .pop {
-        width: 180px;
-        height: 160px;
-    }
-}
-
 .pop img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
 
+@media (max-width: 768px) {
+    .con {
+        position: absolute;
+        top: 65%;
+        left: 8%;
+        width: 85%
+    }
+
+    .center {
+        padding-top: 111px;
+    }
+
+    .imge {
+        position: absolute;
+        top: 15%;
+        right: 8%;
+    }
+
+    .con h1 {
+        font-size: 32px;
+    }
+
+    .con h2 {
+        font-size: 24px;
+    }
+
+    .con p {
+        font-size: 14px;
+    }
+
+    .pop {
+        width: 160px;
+        height: 150px;
+    }
+
+    .box {
+        padding-left: 25px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
 }
