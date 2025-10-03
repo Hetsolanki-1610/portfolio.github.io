@@ -2,292 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Portfolio</title>
-  <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-body {
-    background: #0f172a;
-    /* Dark navy blue */
-    color: white;
-
-
-    font-size: 16px;
-    margin: 0;
-    box-sizing: border-box;
-
-}
-
-header {
-    height: 90vh;
-    width: 100%;
-}
-
-header nav {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(15, 23, 42, 0.95);
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.4);
-    padding: 15px 0;
-    z-index: 1000;
-}
-
-nav .menu {
-    width: 90%;
-    display: flex;
-    margin: auto;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.logo h1 {
-    font-size: 24px;
-    color: #00abf0;
-    letter-spacing: 1px;
-}
-
-.menu .list {
-    display: flex;
-}
-
-.menu .list li {
-    list-style: none;
-    margin-left: 20px;
-}
-
-.menu .list li a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 18px;
-    transition: 0.3s;
-    padding: 6px 12px;
-    border-radius: 6px;
-}
-
-.menu .list li a:hover {
-    background-color: #00abf0;
-    color: #fff;
-}
-
-.imge {
-    position: absolute;
-    top: 20%;
-    right: 8%;
-}
-
-.imge img {
-    width: 340px;
-    border-radius: 15px;
-    border: 2px solid #00abf0;
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.6);
-}
-
-.con {
-    position: absolute;
-    top: 35%;
-    left: 8%;
-    width: 50%;
-}
-
-.con h1 {
-    font-size: 50px;
-    line-height: 1.2;
-    margin-bottom: 10px;
-    color: rgb(218, 218, 218);
-    -webkit-text-stroke: .4px #fff;
-}
-
-.con h2 {
-    font-size: 36px;
-    color: #00abf0;
-    margin-bottom: 20px;
-    -webkit-text-stroke: .5px #fff;
-    /* ✅ extra space added */
-}
-
-.con p {
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 1.6;
-    margin-bottom: 25px;
-    color: #e2e8f0;
-}
-
-.ipc a img {
-    border-radius: 50%;
-    border: 2px solid #00abf0;
-    margin-right: 15px;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.ipc a img:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 5px 15px rgba(0, 171, 240, 0.6);
-}
-
-.center h2 {
-    text-align: center;
-    padding-bottom: 30px;
-    font-size: 40px;
-    font-weight: 800;
-    padding-top: 1px;
-    -webkit-text-stroke: .9px #00abf0;
-}
-
-.box {
-    gap: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-
-.pop {
-    width: 250px;
-    height: 250px;
-    border: 2px solid;
-    overflow: hidden;
-    border-radius: 140px;
-}
-
-.pop img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.word {
-    padding-left: 10%;
-    padding-bottom: 12px;
-}
-
-.pro {
-    background-color: #1e1e1e;
-    width: 400px;
-    height: 260px;
-    overflow: hidden;
-    border-radius: 15px;
-    padding: 12px;
-}
-
-.pro img {
-    width: 150px;
-    height: 150px;
-    text-align: center;
-    margin: 10px auto;
-    display: block;
-    border-radius: 17px;
-}
-
-.tox {
-    display: flex;
-    gap: 250px;
-    align-items: center;
-    justify-content: center;
-
-}
-
-@media only screen and (max-width: 455px) {
-    .con {
-        position: absolute;
-        top: 75%;
-        left: 8%;
-        width: 85%
-    }
-
-    .center {
-        padding-top: 111px;
-    }
-
-    .imge {
-        position: absolute;
-        top: 15%;
-        right: 8%;
-    }
-
-    .con h1 {
-        font-size: 32px;
-    }
-
-    .con h2 {
-        font-size: 24px;
-    }
-
-    .con p {
-        font-size: 14px;
-    }
-
-    .pop {
-        width: 160px;
-        height: 150px;
-    }
-
-    .box {
-        padding-left: 25px;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 30px;
-    }
-
-    .menu .list li {
-        list-style: none;
-        margin-left: 12px;
-    }
-}
-
-.btn {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 25px;
-}
-
-.btn button {
-    width: 123px;
-    height: 40px;
-    border: #444;
-    border-radius: 12px;
-    background-color: #444;
-    color: #fff;
-    font-size: 15px;
-}
-
-.btn button:hover {
-    background-color: #333;
-}
-
-@media only screen and (max-width: 455px) {
-    .tox {
-        display: grid;
-        gap: 30px;
-    }
-
-    .pro {
-        background-color: #1e1e1e;
-        width: 320px;
-        height: 260px;
-        overflow: hidden;
-        border-radius: 15px;
-        padding: 12px;
-    }
-
-    .btn {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        padding-top: 12px;
-        gap: 20px;
-    }
-}
-    </style>
+  <style></style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
@@ -311,7 +29,7 @@ nav .menu {
     </div>
     <div class="con">
       <h1>Hi, I'm Het Solanki</h1>
-      <h2>Frontend Developer</h2>
+      <h2 id="role"></h2>
       <p>Passionate about building responsive, modern, and user-friendly web projects using HTML, CSS, and JavaScript.</p>
       <div class="ipc">
         <a href="#"><img class="im1" width="40" src="img1.png" alt=""></a>
@@ -325,24 +43,21 @@ nav .menu {
   <h2> Skills</h2>
 </div>
 
-  <section class="box">
-    <div class="pop">
-      <img src="https://cdn3d.iconscout.com/3d/free/preview/free-html-3d-icon-png-download-4781249.png?f=webp&h=700" alt="">
-      <h2></h2>
-    </div>
-    <div class="pop">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrxhwg_X-XpKv5p4iXbwtEoUlkqQAkzJ1zsKqShwZkNhAkFcahVitQ8ydOKpGfbYCjshg&usqp=CAU" alt="">
-    </div>
-    <div class="pop">
-      <img src="https://thumbs.dreamstime.com/z/javascript-logo-editorial-illustrative-white-background-eps-download-vector-jpeg-banner-javascript-logo-editorial-illustrative-208329459.jpg" alt="">
-    </div>
-    <div class="pop">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwT6e0KfbvgZ-B-Me0W2pL_SR6mrCyQLV1Ww&s" alt="">
-    </div>
-
-    
-  </section>
-  </section>
+<section class="box">
+  <div class="pop">
+    <img src="https://cdn3d.iconscout.com/3d/free/preview/free-html-3d-icon-png-download-4781249.png?f=webp&h=700" alt="">
+    <h2></h2>
+  </div>
+  <div class="pop">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrxhwg_X-XpKv5p4iXbwtEoUlkqQAkzJ1zsKqShwZkNhAkFcahVitQ8ydOKpGfbYCjshg&usqp=CAU" alt="">
+  </div>
+  <div class="pop">
+    <img src="https://thumbs.dreamstime.com/z/javascript-logo-editorial-illustrative-white-background-eps-download-vector-jpeg-banner-javascript-logo-editorial-illustrative-208329459.jpg" alt="">
+  </div>
+  <div class="pop">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwT6e0KfbvgZ-B-Me0W2pL_SR6mrCyQLV1Ww&s" alt="">
+  </div>
+</section>
 <div class="center">
   <h2>About</h2>
 </div>
@@ -351,7 +66,8 @@ nav .menu {
 </div>
 <section class="tox">
   <div class="pro">
-    <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6AR0QL_up_YPrDpD_MPIwM5wmj2MVswSOWQ&s" alt="">
+    <img  src="https://img.freepik.com/free-vector/dark-login-form-template_1017-8884.jpg" alt="">
+    <h4>Login page</h4>
      <div class="btn">
       <button>View Live</button>
       <button>Git Hub</button>
@@ -359,11 +75,90 @@ nav .menu {
   </div>
   <div class="pro">
     <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6AR0QL_up_YPrDpD_MPIwM5wmj2MVswSOWQ&s" alt="">
+    <h4>Calculater page</h4>
     <div class="btn">
       <button>View Live</button>
       <button>Git Hub</button>
     </div>
   </div>
   </section>
+
+  <div class="word">
+  <h3>Service</h3>
+</div>
+
+  <section class="ser">
+    <div class="side" >
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVYuiiRuzAZ-EJJP7YsFD581OSSakryJMb3w&s" alt="">
+      <div class="op">
+        <h3>Fronted Devloper</h3>
+        <p>"Clean and functional code with HTML, CSS, JS, React"</p>
+      </div>
+    </div>
+
+    <div class="side" >
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbzNegzdeehUb7L0eHItrQGkPGQghzqlmiOQ&s" alt="">
+       <div class="op">
+        <h3>Landing Page Design</h3>
+        <p>“High-converting landing pages for products, startups, and businesses.”</p>
+      </div>
+    </div>
+    <div class="side" >
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT06gn5kOpzHVMsbXdUS83TjbZFpk_z4LIJrg&s" alt="">
+       <div class="op">
+        <h3>Responsive Design</h3>
+        <p>"Mobile-friendly and cross-device layouts"</p>
+      </div>
+    </div>
+    <div class="side" >
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnkCjeHiihBJyDYgats0rxBInFrgEXMosr-g&s" alt="">
+       <div class="op">
+        <h3>E-commerce Frontend</h3>
+        <p>“Custom e-commerce frontend with product catalog, cart management, and with payment system</p>
+      </div>
+    </div>
+  </section>
+
+    <div class="word">
+  <h3>About</h3>
+</div>
+
+  <section class="abt">
+    <div class="adt">
+      <img width="122" src="WhatsApp Image 2025-10-03 at 07.14.43_d9c287e6.jpg" alt="">
+      <p>“I’m Het Solanki, a Frontend Developer passionate about creating modern, responsive, and user-friendly websites. With skills in HTML, CSS, JavaScript, and React, I focus on building clean designs and smooth user experiences. I’m always learning and improving, aiming to grow as a Full Stack Developer while helping businesses and startups bring their ideas to life.”</p>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- <script>
+   let text ="Fronted Devloper"
+   let i=0;
+   function typing(){
+    if (i < text.length){
+      document.getElementById("role").innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typing, 150)
+    }
+   }
+   typing();
+  </script> -->
 </body>
 </html>
