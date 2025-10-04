@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@400;500;600&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -5,16 +7,21 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+
+html {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
 body {
     background: #0f172a;
-    /* Dark navy blue */
     color: white;
-
-
+    font-family: 'Inter', sans-serif;
     font-size: 16px;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
-
 }
 
 header {
@@ -182,7 +189,7 @@ nav .menu {
 }
 
 .pro img {
-    width: 150px;
+    width: 200px;
     height: 150px;
     text-align: center;
     margin: 10px auto;
@@ -242,7 +249,7 @@ nav .menu {
 
     .menu .list li {
         list-style: none;
-        margin-left: 12px;
+        margin-left: 0;
     }
 }
 
@@ -345,12 +352,14 @@ h4 {
 @media only screen and (max-width: 455px) {
     .side {
         padding: 12px;
+        width: 390px;
     }
 
     .ser {
         display: grid;
         grid-template-columns: auto;
     }
+
 }
 
 .abt {
@@ -364,8 +373,16 @@ h4 {
 }
 
 .adt p {
-    width: 50%;
-    font-size: 18px;
+    max-width: 600px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    font-weight: 400;
+}
+
+.abt strong {
+    font-weight: 600;
+    color: #38bdf8;
+    /* Highlight color */
 }
 
 .adt img {
@@ -373,6 +390,233 @@ h4 {
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
-    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.6);
+    border: 3px solid #38bdf8;
+    /* Light blue border */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
 }
- 
+
+@media only screen and (max-width:455px) {
+    .adt {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .adt p {
+        max-width: 550px;
+        font-size: 1.4rem;
+        line-height: 1.7;
+        font-weight: 400;
+        padding-top: 25px;
+    }
+}
+
+h2 {
+    padding: 15PX;
+    text-align: center;
+}
+
+.form {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.forn {
+    background: linear-gradient(135deg, #111827, #1f2939);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    padding: 27px;
+
+}
+
+.forn input {
+    width: 300px;
+    height: 60px;
+    border-radius: 10px;
+    border: none;
+    padding: 12px;
+    margin: 10px;
+}
+
+.forn textarea {
+    width: 300px;
+    height: 80px;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    margin: 10px;
+    resize: none;
+}
+
+.forn button {
+    width: 300px;
+    height: 55px;
+    border-radius: 10px;
+    border: none;
+    background: #38bdf8;
+    color: #fff;
+    padding: 12px;
+    margin: 10px;
+}
+
+.forn button:hover {
+    background: #0ea5e9;
+}
+
+.forn h1 {
+    font-size: 20px;
+    padding: 12px;
+    margin: 10px;
+}
+
+@media only screen and (max-width: 455px) {
+    .forn {
+        display: block;
+    }
+
+    .forn form {
+        padding-top: 22px;
+    }
+
+    .forn input {
+        width: 350px;
+        height: 60px;
+        border-radius: 10px;
+        border: none;
+        padding: 12px;
+        margin: 10px;
+    }
+
+    .forn textarea {
+        width: 350px;
+        height: 80px;
+        border-radius: 10px;
+        border: none;
+        padding: 10px;
+        margin: 10px;
+        resize: none;
+    }
+
+    .forn button {
+        width: 350px;
+        height: 55px;
+        border-radius: 10px;
+        border: none;
+        background: #38bdf8;
+        color: #fff;
+        padding: 12px;
+        margin: 10px;
+    }
+}
+
+
+.fot {
+    border: 1px solid;
+    width: 100%;
+    background-color: #E6E6FA;
+    margin-top: 32px;
+}
+
+.for h1 {
+    text-align: center;
+    padding-top: 12px;
+    color: #000;
+}
+
+.gol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-top: 50px;
+}
+
+.gol input {
+    width: 55%;
+    height: 50px;
+    border-radius: 25px;
+    border: none;
+    padding: 20px;
+    font-size: 15px;
+    cursor:auto;
+}
+
+.gol button {
+    position: absolute;
+    right: 24%;
+    width: 9%;
+    height: 37px;
+    background: #663399;
+    color: #fff;
+    border-radius: 17px;
+    border: none;
+}
+
+.gol button:hover {
+    background: #000;
+}
+.kon{
+    color: #000;
+    padding: 60px;
+}
+.kon p{
+    margin: 12px;
+}
+.profile-icon {
+    color: #8a2be2; /* बैंगनी रंग का आइकन */
+    font-size: 30px;
+    margin-right: 10px;
+    position: relative;
+}
+.profile-name {
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+}
+.companey{
+    color: #333;
+}
+.companey h3{
+    font-size: 24px;
+    padding-bottom: 15px;
+}
+.companey li{
+    list-style: none;
+    padding-bottom: 15px;
+}
+.companey li a{
+    text-decoration: none;
+    color: #1e1e1e;
+}
+.het{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    gap: 12px;
+}
+
+@media only screen and (max-width: 455px){
+    .het{
+        display: flex;
+        flex-direction: column;
+        align-items: self-start;
+    }
+    .companey{
+        padding-left: 15px;
+    }
+
+}
