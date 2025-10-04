@@ -133,7 +133,7 @@ nav .menu {
     box-shadow: 0px 5px 15px rgba(0, 171, 240, 0.6);
 }
 
-.center h2 {
+.center h5 {
     text-align: center;
     padding-bottom: 30px;
     font-size: 40px;
@@ -413,11 +413,6 @@ h4 {
     }
 }
 
-h2 {
-    padding: 15PX;
-    text-align: center;
-}
-
 .form {
     padding-top: 30px;
     display: flex;
@@ -551,7 +546,7 @@ h2 {
     border: none;
     padding: 20px;
     font-size: 15px;
-    cursor:auto;
+    cursor: auto;
 }
 
 .gol button {
@@ -568,55 +563,260 @@ h2 {
 .gol button:hover {
     background: #000;
 }
-.kon{
+
+.kon {
     color: #000;
     padding: 60px;
 }
-.kon p{
+
+.kon p {
     margin: 12px;
 }
+
 .profile-icon {
-    color: #8a2be2; /* बैंगनी रंग का आइकन */
+    color: #8a2be2;
+    /* बैंगनी रंग का आइकन */
     font-size: 30px;
     margin-right: 10px;
     position: relative;
 }
+
 .profile-name {
     color: #333;
     font-size: 24px;
     font-weight: bold;
 }
-.companey{
+
+.companey {
     color: #333;
 }
-.companey h3{
+
+.companey h3 {
     font-size: 24px;
     padding-bottom: 15px;
 }
-.companey li{
+
+.companey li {
     list-style: none;
     padding-bottom: 15px;
 }
-.companey li a{
+
+.companey li a {
     text-decoration: none;
     color: #1e1e1e;
 }
-.het{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+
+.het {
+    display: flex;
     align-items: center;
-    justify-items: center;
+    justify-content: space-around;
     gap: 12px;
 }
+.fr{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+}
 
-@media only screen and (max-width: 455px){
-    .het{
+@media only screen and (max-width: 455px) {
+    .het {
         display: flex;
         flex-direction: column;
         align-items: self-start;
     }
-    .companey{
+
+    .companey {
         padding-left: 15px;
     }
+}
+
+@media only screen and (max-width: 400px) {
+    .menu .list li a {
+        font-size: 15px;
+        padding: 9px;
+    }
+
+    .con {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 75%;
+        left: 8%;
+        width: 90%
+    }
+
+    .center {
+        padding-top: 111px;
+    }
+
+    .imge {
+        position: absolute;
+        top: 15%;
+        right: 8%;
+    }
+
+    .con h1 {
+        font-size: 32px;
+    }
+
+    .con h2 {
+        font-size: 24px;
+    }
+
+    .con p {
+        font-size: 14px;
+    }
+
+    .pop {
+        width: 160px;
+        height: 150px;
+    }
+
+    .box {
+        padding-left: 25px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+
+    .menu .list li {
+        list-style: none;
+        margin-left: 0;
+    }
+
+    .tox {
+        display: grid;
+        gap: 30px;
+    }
+
+    .pro {
+        background-color: #1e1e1e;
+        width: 320px;
+        height: 260px;
+        overflow: hidden;
+        border-radius: 15px;
+        padding: 2px;
+    }
+
+    .btn {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding-top: 12px;
+        gap: 20px;
+    }
+
+    .side {
+        margin: 5px;
+        width: 380px;
+    }
+
+    .ser {
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+    .adt {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 15px;
+    }
+
+    .adt p {
+        max-width: 580px;
+        font-size: 20px;
+        line-height: 1.9;
+        font-weight: 400;
+        padding-top: 25px;
+    }
+
+    .forn {
+        display: block;
+        padding-left: 12px;
+    }
+
+    .forn form {
+        padding-top: 22px;
+        gap: 12px;
+    }
+
+    .forn input {
+        width: 310px;
+        height: 60px;
+        border-radius: 10px;
+        border: none;
+        padding: 12px;
+        margin: 10px;
+    }
+
+    .forn textarea {
+        width: 310px;
+        height: 80px;
+        border-radius: 10px;
+        border: none;
+        padding: 10px;
+        margin: 10px;
+        resize: none;
+    }
+
+    .forn button {
+        width: 310px;
+        height: 55px;
+        border-radius: 10px;
+        border: none;
+        background: #38bdf8;
+        color: #fff;
+        padding: 12px;
+        margin: 10px;
+    }
+
+    
+.fot {
+    border: 1px solid;
+    width: 100%;
+    background-color: #E6E6FA;
+    margin-top: 32px;
+}
+
+.for h1 {
+    text-align: center;
+    padding-top: 12px;
+    color: #000;
+}
+
+.gol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-top: 50px;
+}
+
+.gol input {
+    width: 80%;
+    height: 50px;
+    border-radius: 25px;
+    border: none;
+    padding: 20px;
+    font-size: 16px;
+    cursor: auto;
+}
+
+.gol button {
+    position: absolute;
+    right: 14%;
+    width: 20%;
+    height: 37px;
+    background: #663399;
+    color: #fff;
+    border-radius: 17px;
+    border: none;
+}
+
+.gol button:hover {
+    background: #000;
+}
 
 }
