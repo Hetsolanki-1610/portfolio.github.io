@@ -213,6 +213,22 @@
     }
    }
    typing();
+    
+    const form =document.getElementById("contactForm");
+   form.addEventListener("submit", e=> {
+    e.preventDefault();
+    const name=document.getElementById("name").value.trim();
+    const email=document.getElementById("email").value.trim();
+    const message=document.getElementById("message").value.trim();
+    if(!name || !email || !message){
+      alert("pless fill all fields!")
+      return;
+    }
+    const phone="7698960192";
+    const  text=`Name: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
+    window.open(`https://wa.me/${phone}?text=${text}`, "_blank");
+    form.reset();
+   })
   </script> 
 </body>
 </html>
