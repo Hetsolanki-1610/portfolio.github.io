@@ -146,16 +146,19 @@
         <a href="#"><img class="im3" width="40" src="img3.png" alt=""></a>
       </div>
       </div>
-      <form id="contactForm">
-        <h2>Contact Me</h2>
-        <label for="name">Name`</label>
-        <input type="text" placeholder="Name" required>
-        <label for="email">Email</label>
-        <input type="email" placeholder="Email" required>
-        <label for="message">Message</label>
-        <textarea id="message" name="message" placeholder="Message" required></textarea>
-        <BUtton type="submit">Send Message</BUtton>
-      </form>
+     <form id="contactForm">
+  <h2>Contact Me</h2>
+  <label for="name">Name</label>
+  <input type="text" id="name" placeholder="Name" required>
+
+  <label for="email">Email</label>
+  <input type="email" id="email" placeholder="Email" required>
+
+  <label for="message">Message</label>
+  <textarea id="message" name="message" placeholder="Message" required></textarea>
+
+  <button type="submit">Send Message</button>
+</form>
     </div>
   </section>
 
@@ -214,7 +217,7 @@
    }
    typing();
     
-   const form = document.getElementById("contactForm");
+const form = document.getElementById("contactForm");
 
 form.addEventListener("submit", e => {
   e.preventDefault();
@@ -222,14 +225,17 @@ form.addEventListener("submit", e => {
   const name = document.getElementById("name").value.trim();
   const email = document.getElementById("email").value.trim();
   const message = document.getElementById("message").value.trim();
+
   if(!name || !email || !message){
     alert("Please fill all fields!");
     return;
   }
-  const phone = "917698960192"; 
-   const text = `Name: ${name}\nEmail: ${email}\nMessage: ${message}`;
+
+  const phone = "917698960192";
+  const text = `Name: ${name}\nEmail: ${email}\nMessage: ${message}`;
   const encodedText = encodeURIComponent(text);
   location.href = `https://wa.me/${phone}?text=${encodedText}`;
+
   form.reset();
 });
   </script> 
