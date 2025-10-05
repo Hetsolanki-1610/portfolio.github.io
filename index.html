@@ -146,7 +146,7 @@
         <a href="#"><img class="im3" width="40" src="img3.png" alt=""></a>
       </div>
       </div>
-      <form >
+      <form id="contactForm">
         <h2>Contact Me</h2>
         <label for="name">Name`</label>
         <input type="text" placeholder="Name" required>
@@ -227,7 +227,7 @@ form.addEventListener("submit", e => {
     return;
   }
   const phone = "917698960192"; 
-  const text = `Name: ${name}\nEmail: ${email}\nMessage: ${message}`;
+   const text = `Name: ${name}\nEmail: ${email}\nMessage: ${message}`;
   const encodedText = encodeURIComponent(text);
   location.href = `https://wa.me/${phone}?text=${encodedText}`;
   form.reset();
