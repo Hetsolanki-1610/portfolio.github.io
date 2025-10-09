@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="lpage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body class="">
+    <nav>
+        <div class="menu">
+            <div class="logo">
+                <h1>COPPER COFFEE</h1>
+            </div>
+            <div class="menu-icon">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">CONTECT</a></li>
+            </ul>
+            <div class="ipc">
+                <a href="#"><i class="fas fa-user-circle facbook-icon"></i></a>
+                <a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span></a>
+            </div>
+        </div>
+    </nav>
+    <div class="carttab">
+        <h1>Shopping Cart</h1>
+        <div class="listcart">
+            <div class="item">
+                <div class="image">
+                    <img src="" alt="">
+                </div>
+                <div class="name"></div>
+                <div class="price"> </div>
+                <div class="que"></div>
+            </div>
+        </div>
+        <div class="bt">
+            <button class="close">CLOSE</button>
+            <button class="check">CHECK OUT</button>
+        </div>
+    </div>
+
+    <div class="dis">
+        <p>20% off Coffees with a Subscription</p>
+    </div>
+    <div class="txt">
+        <h2>Choose Your Coffee</h2>
+        <p>Stick to Classic, spice things up with a flavor, or mix and </p>
+        <p>match. Enjoy your ritual, your way.</p>
+    </div>
+
+
+    <section class="flex">
+            <div class="imge">
+                <img width="122"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIru_Z8iGCPi4SAS2NxLDbTHq4_FJkjekd-Oy1Kpvd2EZqTj-icOZmlCLchRRo71X5rfQ&usqp=CAU"
+                alt="">
+                <div class="fnt">
+                    <h1>Classic Black</h1>
+                    <p>Includes 8 coffees</p>
+                    <h3>$14.00</h3>
+                    <button>ADD TO BOX</button>
+                </div>
+            </div>
+            <div class="imge">
+                <img width="122"
+                src="https://images.squarespace-cdn.com/content/v1/57fa9cafe4fcb5e6ab28144a/059f1844-12cb-4ec3-bbf6-4631eeef6f20/Vietnamese+pour+over+coffee?format=750w"
+                alt="">
+                <div class="fnt">
+                    <h1>Vanilla Coffee</h1>
+                    <p>Includes 8 coffees</p>
+                <h3>$14.00</h3>
+                <button>ADD TO BOX</button>
+            </div>
+        </div>
+        <div class="imge">
+            <img src="https://coppercowcoffee.com/cdn/shop/files/CCC-PDP-8Pack-Churro-Contents.jpg?crop=center&height=720&v=1747439862&width=600"
+                alt="">
+                <div class="fnt">
+                    <h1>Churro Coffee</h1>
+                    <p>Includes 8 coffees</p>
+                    <h3>$14.00</h3>
+                    <button>ADD TO BOX</button>
+                </div>
+            </div>
+            <div class="imge">
+                <img width=""
+                src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTOXLbbjKcvzh3fS4CtxlnLy1ohyWWEDxr4keU_NDOMzON6EXCm"
+                alt="">
+                <div class="fnt">
+                    <h1>Caramel Coffee</h1>
+                    <p>Includes 8 coffees</p>
+                    <h3>$14.00</h3>
+                    <button>ADD TO BOX</button>
+                </div>
+           
+        </div>
+    </section>
+
+
+    <script>
+        let iconcart = document.querySelector('.cart-icon');
+        let close = document.querySelector('.close');
+        let body = document.querySelector('body');
+        let listCartHTML = document.querySelector('.listcart');
+        let cartCount = document.querySelector('.cart-count');
+        let addToCartButtons = document.querySelectorAll('.imge button');
+
+        let cart = [];
+
+        // Open/Close Cart
+        iconcart.addEventListener('click', () => {
+            body.classList.toggle('show');
+        });
+        close.addEventListener('click', () => {
+            body.classList.toggle('show');
+        });
+
+        // Add product to cart
+        addToCartButtons.forEach((button, index) => {
+            button.addEventListener(`click`, () => {
+                let parent = button.closest(`.imge`);
+                let name = parent.querySelector(`h1`).innerText;
+                let price = parseFloat(parent.querySelector(`h3`).innerText.replace(`$`, ``));
+                let imgSrc = parent.querySelector(`img`).src;
+                let productId = index;
+
+                let ex = cart.find(item => item.id === productId);
+                if (ex) {
+                    ex.quantity++;
+                } else {
+                    cart.push({ id: productId, name, price, imgSrc, quantity: 1 });
+                }
+                updateCart();
+            })
+        })
+
+        // Update Cart Display
+        function updateCart() {
+            listCartHTML.innerHTML = '';
+            let totalItems = 0;
+
+            cart.forEach((item, index) => {
+                totalItems += item.quantity;
+
+                let cartItem = document.createElement('div');
+                cartItem.classList.add('item');
+                cartItem.innerHTML = `
+      <div class="image">
+        <img src="${item.imgSrc}" alt="${item.name}" width="80">
+      </div>
+      <div class="name">${item.name}</div>
+      <div class="price">$${(item.price * item.quantity).toFixed(2)}</div>
+      <div class="que">
+        <span class="min" data-index="${index}"><</span>
+        <span>${item.quantity}</span>
+        <span class="plu" data-index="${index}">></span>
+      </div>
+    `;
+                listCartHTML.appendChild(cartItem);
+            });
+
+            cartCount.innerText = totalItems;
+
+
+            // Event listeners for quantity buttons
+            document.querySelectorAll('.min').forEach(btn => {
+                btn.addEventListener('click', () => changeQuantity(btn.dataset.index, 'minus'));
+            });
+
+            document.querySelectorAll('.plu').forEach(btn => {
+                btn.addEventListener('click', () => changeQuantity(btn.dataset.index, 'plus'));
+            });
+        }
+
+        // Change Quantity
+        function changeQuantity(index, type) {
+            if (type === 'plus') {
+                cart[index].quantity++;
+            } else if (type === 'minus') {
+                cart[index].quantity--;
+                if (cart[index].quantity <= 0) {
+                    cart.splice(index, 1);
+                }
+            }
+            updateCart();
+        }
+        // Select menu icon and nav links
+        const menuIcon = document.querySelector(".menu-icon");
+        const navLinks = document.querySelector(".nav-links");
+
+        // Toggle menu on click
+        menuIcon.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+
+            // Change icon from bars to close
+            const icon = menuIcon.querySelector("i");
+            icon.classList.toggle("fa-bars");
+            icon.classList.toggle("fa-times");
+        });
+
+    </script>
+</body>
+
+</html>
